@@ -1,0 +1,38 @@
+<ion-view style="" class=" " id="page20" title="contact us">
+    <ion-content class="has-header" padding="false">
+		<div ng-controller="contactCtrl">
+			<div class="list card" style="margin-bottom: 3px">
+				<div class="popularplaces" >	
+					<p class="placeheader">If you have any suggestions or complains about our app or details pleace send us a mail or send following form</p>
+					<p class="placepara"></p>
+				</div>
+				</div>
+					<form class="list " ng-submit="submit()">
+
+
+
+						<div class="list card" style="margin-bottom: 3px">
+								  <label class="item item-input item-floating-label">
+									<span class="input-label" style="font-color:#2445">User Name</span>
+									<input type="text" placeholder="User Name" ng-model="data.username">
+								  </label>
+								  <label class="item item-input item-floating-label">
+									<span class="input-label">Place Name</span>
+									<input type="text" placeholder="Place name" ng-model="data.placename">
+								  </label>
+								  <label class="item item-input item-floating-label">
+									<span class="input-label">Description</span>
+									<input type="text" placeholder="Description" ng-model="data.des">
+									
+								  </label>
+								  
+							</div>
+							<input class="button button-calm button-small button-block" style="border-radius:30px 30px 30px 30px;" type="submit" name="submit" value="Submit">   
+					</form>
+					<p>{{response}}</p>
+				
+			
+		
+		</div>
+    </ion-content>
+</ion-view>

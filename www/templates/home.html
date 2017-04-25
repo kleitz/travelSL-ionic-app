@@ -1,0 +1,168 @@
+<ion-view style="" class=" " id="page2" title="Home">
+    <ion-content class="has-header" padding="false" >
+		<div padding="true">
+            <img style="display: block; margin-left: auto; margin-right: auto;" src="img/3.jpg" height="auto" width="100%">
+        </div>
+        <br>
+       
+		<div   ng-controller="AppCtrl">
+			<div style="padding: 2px 10px 2px 10px" >
+				<form class="list "  ng-submit="submit()">
+					<label id="smallSearch" style="border-radius:30px 30px 30px 30px;" name="search bar" class="item item-input">
+						<i class="icon ion-search placeholder-icon"></i>
+						<input placeholder="enter  place or city " type="search" ng-model="data.username">
+					</label>
+				</form>
+			</div>
+				<!--search results-->
+				
+					<ul>
+						<li ng-repeat="x in response">
+							<div class="list card" style="margin-bottom: 3px">
+								<div class="popularplaces" >
+								<!--<img src="avatar.jpg">-->
+									<p class="placeheader"><strong>{{ x.name }}</strong></p>
+									<p class="placepara">category:{{ x.category }}</p>
+									<!--<p>{{ x.address }}</p>-->
+								</div>
+								<div class="item item-image">
+									<img src="{{ x.photopath }}">
+								</div>
+								<!--<button class="button button-clear button-positive" style="font-size:12px" ng-click="myFunc()"><strong>See more..</srong></button>-->
+								<div class="item range range-positive" style="color: #307A10; border-color: #ddd0; background-color: #fff0">
+								    <i class="icon ion-ios-star-outline"></i>
+								    <input type="range" name="volume" min="0" max="5" value="3.3">
+								    <i class="icon ion-star"></i>
+							  	</div>
+								<button class=" button button-calm button-small button-block " style="border-radius:30px 30px 30px 30px;" ng-click="navigate(x.name)">See more</button>
+								
+								<div ng-show="showMe">
+									<p class="placepara">near city:{{ x.nearCity }}</p>
+									<br>
+									<div style="padding: 2px 10px 2px 10px">
+									<p class="placepara"  style="text-align:justify" >Details:{{ x.discription }}</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>	
+        </div>
+
+
+
+<!-- 
+        <div   ng-controller="AppPOPCtrl">
+					<ul>
+						<li ng-repeat="x in responsepop">
+							<div class="list card" style="margin-bottom: 3px">
+								<div class="popularplaces" >
+								<!--<img src="avatar.jpg">-->
+									<!--<p class="placeheader"><strong>{{ x.name }}</strong></p>
+									<p class="placepara">category:{{ x.category }}</p>
+									<!--<p>{{ x.address }}</p>-->
+								<!--</div>
+								<div class="item item-image">
+									<img src="{{ x.photopath }}">
+								</div>
+								<!--<button class="button button-clear button-positive" style="font-size:12px" ng-click="myFunc()"><strong>See more..</srong></button>-->
+								<!--<div class="item range range-positive" style="color: #307A10; border-color: #ddd0; background-color: #fff0">
+								    <i class="icon ion-ios-star-outline"></i>
+								    <input type="range" name="volume" min="0" max="5" value="3.3">
+								    <i class="icon ion-star"></i>
+							  	</div>
+								<button class=" button button-calm button-small button-block " style="border-radius:30px 30px 30px 30px;" ng-click="navigate(x.name)">See more</button>
+								
+								<div ng-show="showMe">
+									<p class="placepara">near city:{{ x.nearCity }}</p>
+									<br>
+									<div style="padding: 2px 10px 2px 10px">
+									<p class="placepara"  style="text-align:justify" >Details:{{ x.discription }}</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>	
+        </div> -->
+
+
+
+
+
+        
+        
+        
+        <!--popular places-->
+        <div ng-controller="AppPOPCtrl">
+        	<ul>
+				<li ng-repeat="x in responsepop">
+					<div class="list card" style="margin-bottom: 3px">
+						<div class="row">
+							<div class="col col-33">
+								
+								
+									
+										  <div class="popularplaces" >
+											<!--<img src="avatar.jpg">-->
+											
+										  </div>
+										  <div class="item item-image">
+										  	<img src="{{ x.photopath }}">
+										  </div>
+									
+								</div>
+								<div class="col col-66">
+									<strong><p class="placeheader">{{x.name}}</p></strong></strong>
+									<p class="placepara">Near by:{{ x.nearCity }}</p>
+									<button class=" button button-calm button-small button-block " style="border-radius:30px 30px 30px 30px; width:50%" ng-click="navigate(x.name)">See more</button>	
+								</div>
+								
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</li>
+			<ul>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div style="padding: 2px 10px 2px 10px" >
+			
+			<a class=" button button-calm button-small button-block " style="border-radius:30px 30px 30px 30px;" id="category-button4" ui-sref="tabsController.Sugges">Near by</a>
+		</div>
+    </ion-content>
+     <div class="float-button">
+			<span class="height-fix">
+				
+			<a class="content" ui-sref="sightseeing">
+			<i class="icon ion-location"></i>
+			
+			</a>
+			</span>
+		</div>
+	<div class="float-button2">
+			<span class="height-fix">
+				
+			<a class="content" ui-sref="sightseeing2">
+			<i class="icon ion-location"></i>
+			
+			</a>
+			</span>
+		</div>	
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view style="" class=" " id="page19" title="Near by places">
+    <ion-content class="has-header" padding="false">
+    <!--near-->
+			<div ng-controller="nearbyloCtrl">
+					<ul>
+						<li ng-repeat="x in names">
+							<div class="list card" style="margin-bottom: 3px">
+								<div class="popularplaces" >
+								<!--<img src="avatar.jpg">-->
+									<p class="placeheader">{{ x.name }}</p>
+									<p class="placepara">category:{{ x.category }}</p>
+									<!--<p>{{ x.address }}</p>-->
+								</div>
+								<div class="item item-image">
+									<img src="{{ x.photopath }}">
+								</div>
+								<div ng-show="showMe">
+									<p class="placepara">near city:{{ x.nearCity }}</p>
+									<br>
+									<p class="placepara"  style="text-align:justify">Details:{{ x.discription }}</p>
+								
+								</div>
+								<button class="button button-clear button-positive" style="font-size:12px" ng-click="myFunc()">See more..</button>
+								
+							</div>
+						</li>
+					</ul>
+					
+					
+					
+					
+			</div>
+    
+    
+    </ion-content>
+</ion-view>
